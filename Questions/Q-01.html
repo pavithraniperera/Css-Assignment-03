@@ -1,10 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="font-size: 20px;">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>1st assignment</title>
+    <link rel="stylesheet" href="../assets/normalize.css">
+
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .squire-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .squire {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+        }
+
+        .squire:nth-child(1) {
+            background-color: red;
+        }
+        .squire:nth-child(2) {
+            background-color: green;
+            right: 0;
+        }
+        .squire:nth-child(3) {
+            background-color: orange;
+            bottom: 0;
+        }
+        .squire:nth-child(4) {
+            background-color: deeppink;
+            right: 0;
+            bottom: 0;
+        }
+
+        .mid-squire {
+            width: 15vw;
+            height: 15vw;
+            background-color: white;
+            aspect-ratio: 1/1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mid-squire .inner-circle {
+            width: 60%;
+            height: 60%;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .squire>div {
+            width: 30%;
+            aspect-ratio: 1/1;
+            background-color: white;
+            border-radius: 100%;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        .squire>div>div {
+            width: 40%;
+            aspect-ratio: 1/1;
+            background-color: red;
+            position: absolute;
+
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+
+        .corner {
+            width: 10vw;
+            height: 10vw;
+            background-color: white;
+            border-radius: 50%;
+            position: absolute;
+        }
+        #corner1 {
+            top: -5vw;
+            left: -5vw;
+        }
+        #corner2 {
+            top: -5vw;
+            right: -5vw;
+        }
+        #corner3 {
+            bottom: -5vw;
+            left: -5vw;
+        }
+        #corner4 {
+            bottom: -5vw;
+            right: -5vw;
+        }
+        #corner5, #corner6 {
+            top: -5vw;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #corner6 {
+            top: auto;
+            bottom: -5vw;
+        }
+
+    </style>
+
 </head>
 <body>
+
+<div class="squire-container">
+    <div class="squire"><div>
+        <div></div>
+    </div></div>
+    <div class="squire"><div>
+        <div></div>
+    </div></div>
+    <div class="squire"><div>
+        <div></div>
+    </div></div>
+    <div class="squire"><div>
+        <div></div>
+    </div></div>
+
+    <div id="corner1" class="corner"></div>
+    <div id="corner2" class="corner"></div>
+    <div id="corner3" class="corner"></div>
+    <div id="corner4" class="corner"></div>
+    <div id="corner5" class="corner"></div>
+    <div id="corner6" class="corner"></div>
+
+    <div class="mid-squire">
+        <div class="inner-circle"></div>
+    </div>
+</div>
 
 </body>
 </html>
